@@ -6,6 +6,8 @@ This project aims to develop an AI-enabled system that focus on Digits recogniti
 Project Organization
 ------------
 For this project we will be using a CNN that is a type of artificial neural network used primarily for image recognition and processing, due to its ability to recognize patterns in images. A CNN is a powerful tool but requires millions of labelled data points for training. CNNs must be trained with high-power processors, such as a GPU or an NPU, if they are to produce results quickly enough to be useful. (https://www.arm.com/glossary/convolutional-neural-network#:~:text=A%20convolutional%20neural%20network%20(CNN)%20is%20a%20type%20of%20artificial,to%20recognize%20patterns%20in%20images)
+A convolutional neural network can have many layers, each of which learns different features of an image. Filters are applied to each training image at different resolutions and the output of each convolutional image is used as input for the next layer. The filters may start with very simple features, such as brightness or edges, and become increasingly complex until they include features that uniquely define the object. (https://it.mathworks.com/discovery/convolutional-neural-network.html)
+
 
     ├── LICENSE
     ├── Makefile           <- Makefile with commands like `make data` or `make train`
