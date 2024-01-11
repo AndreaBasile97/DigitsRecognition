@@ -5,6 +5,7 @@ This project aims to develop an AI-enabled system that focus on Digits recogniti
 
 Project Organization
 ------------
+For this project we will be using a CNN 
 
     ├── LICENSE
     ├── Makefile           <- Makefile with commands like `make data` or `make train`
