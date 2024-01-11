@@ -1,9 +1,22 @@
 Digits Recognition
 ==============================
 
-This project aims to develop an AI-enabled system that focus on Digits recognition from images using a Convolutional Neural Network.
-For this project we will be using a CNN that is a type of artificial neural network used primarily for image recognition and processing, due to its ability to recognize patterns in images. A CNN is a powerful tool but requires millions of labelled data points for training. CNNs must be trained with high-power processors, such as a GPU or an NPU, if they are to produce results quickly enough to be useful. (https://www.arm.com/glossary/convolutional-neural-network#:~:text=A%20convolutional%20neural%20network%20(CNN)%20is%20a%20type%20of%20artificial,to%20recognize%20patterns%20in%20images)
-A convolutional neural network can have many layers, each of which learns different features of an image. Filters are applied to each training image at different resolutions and the output of each convolutional image is used as input for the next layer. The filters may start with very simple features, such as brightness or edges, and become increasingly complex until they include features that uniquely define the object. (https://it.mathworks.com/discovery/convolutional-neural-network.html)
+## Project Overview
+
+This project aims to develop an AI-enabled system focused on digit recognition from images using a Convolutional Neural Network (CNN). A CNN is a type of artificial neural network renowned for its efficacy in image recognition and processing, owing to its capacity to discern patterns in images[^1^].
+
+CNNs necessitate extensive labeled datasets for training, often in the order of millions of data points. Furthermore, to ensure swift and practical results, training CNNs demands high-performance processors such as Graphics Processing Units (GPUs) or Neural Processing Units (NPUs)[^1^].
+
+## Convolutional Neural Network (CNN) Architecture
+
+A CNN comprises multiple layers, each dedicated to learning distinct features within an image. Filters are systematically applied to training images at varying resolutions, with the output of each convolutional layer serving as the input for the subsequent layer. The filters typically start by identifying basic features like brightness or edges and progressively evolve to encompass more intricate features that uniquely characterize the object being recognized[^2^].
+
+For further insights, refer to the glossary provided by ARM on Convolutional Neural Networks [^1^] and MathWorks' comprehensive exploration of CNNs[^2^].
+
+[^1^]: [ARM - Convolutional Neural Network](https://www.arm.com/glossary/convolutional-neural-network#:~:text=A%20convolutional%20neural%20network%20(CNN)%20is%20a%20type%20of%20artificial,to%20recognize%20patterns%20in%20images)
+
+[^2^]: [MathWorks - Convolutional Neural Network](https://it.mathworks.com/discovery/convolutional-neural-network.html)
+
 
 Project Organization
 ------------
