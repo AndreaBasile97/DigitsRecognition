@@ -8,6 +8,8 @@
 
 ## Dataset Summary
 
+The MNIST database is a large database of handwritten digits commonly used for training various image processing systems. The database is also widely used for training and testing in the field of machine learning. 
+
 Briefly summarize the dataset, its intended use and the supported tasks. Give an overview of how and why the dataset was created. The summary should explicitly mention the languages present in the dataset (possibly in broad terms, e.g. _translations between several pairs of European languages_), and describe the domain, topic, or genre covered.
 
 ## Supported Tasks and Leaderboards
