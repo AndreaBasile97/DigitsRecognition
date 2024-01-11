@@ -11,6 +11,8 @@ CNNs necessitate extensive labeled datasets for training, often in the order of 
 
 A CNN comprises multiple layers, each dedicated to learning distinct features within an image. Filters are systematically applied to training images at varying resolutions, with the output of each convolutional layer serving as the input for the subsequent layer. The filters typically start by identifying basic features like brightness or edges and progressively evolve to encompass more intricate features that uniquely characterize the object being recognized[^2^].
 
+![0_u5-PcKYVfUE5s2by](https://github.com/AndreaBasile97/DigitsRecognition/assets/49328694/fc58d4d4-aa9b-46db-a9a6-860264fed71d)
+
 
 For further insights, refer to the glossary provided by ARM on Convolutional Neural Networks [^1^] and MathWorks' comprehensive exploration of CNNs[^2^].
 
