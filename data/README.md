@@ -6,17 +6,17 @@
 - Leaderboard: If the dataset supports an active leaderboard, add link here
 - Point of Contact: If known, name and email of at least one person the reader can contact for questions about the dataset.
 
-Dataset Summary
+## Dataset Summary
 
 Briefly summarize the dataset, its intended use and the supported tasks. Give an overview of how and why the dataset was created. The summary should explicitly mention the languages present in the dataset (possibly in broad terms, e.g. _translations between several pairs of European languages_), and describe the domain, topic, or genre covered.
 
-Supported Tasks and Leaderboards
+## Supported Tasks and Leaderboards
 
 For each of the tasks tagged for this dataset, give a brief description of the tag, metrics, and suggested models (with a link to their HuggingFace implementation if available). Give a similar description of tasks that were not covered by the structured tag set (repace the task-category-tag with an appropriate other:other-task-name).
 
 - task-category-tag: The dataset can be used to train a model for [TASK NAME], which consists in [TASK DESCRIPTION]. Success on this task is typically measured by achieving a _high/low_ [metric name](https://huggingface.co/metrics/metric_name). The ([model name](https://huggingface.co/model_name) or [model class](https://huggingface.co/transformers/model_doc/model_class.html)) model currently achieves the following score. _[IF A LEADERBOARD IS AVAILABLE]:_ This task has an active leaderboard which can be found at leaderboard url and ranks models based on [metric name](https://huggingface.co/metrics/metric_name) while also reporting [other metric name](https://huggingface.co/metrics/other_metric_name).
 
-Languages
+## Languages
 
 Provide a brief overview of the languages represented in the dataset. Describe relevant details about specifics of the language such as whether it is social media text, African American English,...
 
@@ -24,7 +24,7 @@ When relevant, please provide [BCP-47 codes](https://tools.ietf.org/html/bcp47),
 
 # Dataset Structure
 
-Data Instances
+## Data Instances
 
 Provide an JSON-formatted example and brief description of a typical instance in the dataset. If available, provide a link to further examples.
 
@@ -38,7 +38,7 @@ Provide an JSON-formatted example and brief description of a typical instance in
 
 Provide any additional information that is not covered in the other sections about the data here. In particular describe any relationships between data points and if these relationships are made explicit.
 
-Data Fields
+## Data Fields
 
 List and describe the fields present in the dataset. Mention their data type, and whether they are used as input or output in any of the tasks the dataset currently supports. If the data has span indices, describe their attributes, such as whether they are at the character level or word level, whether they are contiguous or not, etc. If the datasets contains example IDs, state whether they have an inherent meaning, such as a mapping to other datasets or pointing to relationships between data points.
 
@@ -46,7 +46,7 @@ List and describe the fields present in the dataset. Mention their data type, an
 
 Note that the descriptions can be initialized with the Show Markdown Data Fields output of the [Datasets Tagging app](https://huggingface.co/spaces/huggingface/datasets-tagging), you will then only need to refine the generated descriptions.
 
-Data Splits
+## Data Splits
 
 Describe and name the splits in the dataset if there are more than one.
 
@@ -54,26 +54,15 @@ Describe any criteria for splitting the data, if used. If there are differences 
 
 Provide the sizes of each split. As appropriate, provide any descriptive statistics for the features, such as average length. For example:
 
-|
- | train | validation | test |
-| --- | --- | --- | --- |
-| Input Sentences |
- |
- |
- |
-| --- | --- | --- | --- |
-| Average Sentence Length |
- |
- |
- |
+TABELLA
 
 # Dataset Creation
 
-Curation Rationale
+## Curation Rationale
 
 What need motivated the creation of this dataset? What are some of the reasons underlying the major choices involved in putting it together?
 
-Source Data
+## Source Data
 
 This section describes the source data (e.g. news text and headlines, social media posts, translated sentences,...)
 
@@ -95,7 +84,7 @@ Describe the conditions under which the data was created (for example, if the pr
 
 Describe other people represented or mentioned in the data. Where possible, link to references for the information.
 
-Annotations
+## Annotations
 
 If the dataset contains annotations which are not part of the initial data collection, describe them in the following paragraphs.
 
@@ -113,7 +102,7 @@ If available, include self-reported demographic or identity information for the 
 
 Describe the conditions under which the data was annotated (for example, if the annotators were crowd workers, state what platform was used, or if the data was found, what website the data was found on). If compensation was provided, include that information here.
 
-Personal and Sensitive Information
+## Personal and Sensitive Information
 
 State whether the dataset uses identity categories and, if so, how the information is used. Describe where this information comes from (i.e. self-reporting, collecting from profiles, inferring, etc.). See [Larson 2017](https://www.aclweb.org/anthology/W17-1601.pdf) for using identity categories as a variables, particularly gender. State whether the data is linked to individuals and whether those individuals can be identified in the dataset, either directly or indirectly (i.e., in combination with other data).
 
@@ -123,7 +112,7 @@ If efforts were made to anonymize the data, describe the anonymization process.
 
 # Considerations for Using the Data
 
-Social Impact of Dataset
+## Social Impact of Dataset
 
 Please discuss some of the ways you believe the use of this dataset will impact society.
 
@@ -131,7 +120,7 @@ The statement should include both positive outlooks, such as outlining how techn
 
 Also describe in this section if the proposed dataset contains a low-resource or under-represented language. If this is the case or if this task has any impact on underserved communities, please elaborate here.
 
-Discussion of Biases
+## Discussion of Biases
 
 Provide descriptions of specific biases that are likely to be reflected in the data, and state whether any steps were taken to reduce their impact.
 
@@ -139,21 +128,21 @@ For Wikipedia text, see for example [Dinan et al 2020 on biases in Wikipedia (es
 
 If analyses have been run quantifying these biases, please add brief summaries and links to the studies here.
 
-Other Known Limitations
+## Other Known Limitations
 
 If studies of the datasets have outlined other limitations of the dataset, such as annotation artifacts, please outline and cite them here.
 
 # Additional Information
 
-Dataset Curators
+## Dataset Curators
 
 List the people involved in collecting the dataset and their affiliation(s). If funding information is known, include it here.
 
-Licensing Information
+## Licensing Information
 
 Provide the license and link to the license webpage if available.
 
-Citation Information
+## Citation Information
 
 Provide the [BibTex](http://www.bibtex.org/)-formatted reference for the dataset. For example:
 
@@ -171,6 +160,6 @@ year = {2525}
 
 If the dataset has a [DOI](https://www.doi.org/), please provide it here.
 
-Contributions
+## Contributions
 
 Thanks to [@github-username](https://github.com/%3Cgithub-username%3E) for adding this dataset.
