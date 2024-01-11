@@ -1,13 +1,13 @@
-Digits Recognition
+Digits Recognition 
 ==============================
 
-## Project Overview
+## 👁️ Project Overview
 
 This project aims to develop an AI-enabled system focused on digit recognition from images using a Convolutional Neural Network (CNN). A CNN is a type of artificial neural network renowned for its efficacy in image recognition and processing, owing to its capacity to discern patterns in images[^1^].
 
 CNNs necessitate extensive labeled datasets for training, often in the order of millions of data points. Furthermore, to ensure swift and practical results, training CNNs demands high-performance processors such as Graphics Processing Units (GPUs) or Neural Processing Units (NPUs)[^1^].
 
-## Convolutional Neural Network (CNN) Architecture
+## 🧠 Convolutional Neural Network (CNN) Architecture
 
 A CNN comprises multiple layers, each dedicated to learning distinct features within an image. Filters are systematically applied to training images at varying resolutions, with the output of each convolutional layer serving as the input for the subsequent layer. The filters typically start by identifying basic features like brightness or edges and progressively evolve to encompass more intricate features that uniquely characterize the object being recognized[^2^].
 
