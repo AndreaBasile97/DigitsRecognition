@@ -18,9 +18,9 @@
 
 ## Intended Use
 
-- **Primary Intended Uses:** [List of Primary Uses]
-- **Primary Intended Users:** [List of Primary Users]
-- **Out-of-Scope Use Cases:** [List of Out-of-Scope Use Cases]
+- **Primary Intended Uses:** Recognition of ciphers inside images or texts 
+- **Primary Intended Users:** Everyone
+- **Out-of-Scope Use Cases:** Diagnosis of dysortography
 
 ## Factors
 
