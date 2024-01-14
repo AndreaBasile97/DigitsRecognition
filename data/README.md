@@ -1,167 +1,101 @@
-# Dataset Description
+# Dataset Summary
 
-- Homepage: Add homepage URL here if available (unless it's a GitHub repository)
-- Repository: If the dataset is hosted on github or has a github homepage, add URL here
-- Paper: If the dataset was introduced by a paper or there was a paper written describing the dataset, add URL here (landing page for Arxiv paper preferred)
-- Leaderboard: If the dataset supports an active leaderboard, add link here
-- Point of Contact: If known, name and email of at least one person the reader can contact for questions about the dataset.
+The MNIST database is a comprehensive collection of handwritten digits utilized for training various image processing systems and extensively employed in machine learning experiments. The dataset's primary purpose is to facilitate the development and evaluation of algorithms for digit recognition.
 
-## Dataset Summary
+This dataset composed by handwritten digits has a training set of 60,000 examples, and a test set of 10,000 examples.
+Four files are available:
+train-images-idx3-ubyte.gz: training set images (9912422 bytes)
+train-labels-idx1-ubyte.gz: training set labels (28881 bytes)
+t10k-images-idx3-ubyte.gz: test set images (1648877 bytes)
+t10k-labels-idx1-ubyte.gz: test set labels (4542 bytes)## Supported Tasks and Leaderboards
 
-The MNIST database is a large database of handwritten digits commonly used for training various image processing systems. The database is also widely used for training and testing in the field of machine learning. 
-
-Briefly summarize the dataset, its intended use and the supported tasks. Give an overview of how and why the dataset was created. The summary should explicitly mention the languages present in the dataset (possibly in broad terms, e.g. _translations between several pairs of European languages_), and describe the domain, topic, or genre covered.
-
-## Supported Tasks and Leaderboards
-
-For each of the tasks tagged for this dataset, give a brief description of the tag, metrics, and suggested models (with a link to their HuggingFace implementation if available). Give a similar description of tasks that were not covered by the structured tag set (repace the task-category-tag with an appropriate other:other-task-name).
-
-- task-category-tag: The dataset can be used to train a model for [TASK NAME], which consists in [TASK DESCRIPTION]. Success on this task is typically measured by achieving a _high/low_ [metric name](https://huggingface.co/metrics/metric_name). The ([model name](https://huggingface.co/model_name) or [model class](https://huggingface.co/transformers/model_doc/model_class.html)) model currently achieves the following score. _[IF A LEADERBOARD IS AVAILABLE]:_ This task has an active leaderboard which can be found at leaderboard url and ranks models based on [metric name](https://huggingface.co/metrics/metric_name) while also reporting [other metric name](https://huggingface.co/metrics/other_metric_name).
+- **Digit Recognition Task**: The dataset is commonly used for training models to recognize handwritten digits. Success is measured by achieving high accuracy, with models like the [LeNet](https://yann.lecun.com/exdb/lenet/) architecture setting a benchmark.
 
 ## Languages
 
-Provide a brief overview of the languages represented in the dataset. Describe relevant details about specifics of the language such as whether it is social media text, African American English,...
-
-When relevant, please provide [BCP-47 codes](https://tools.ietf.org/html/bcp47), which consist of a [primary language subtag](https://tools.ietf.org/html/bcp47#section-2.2.1), with a [script subtag](https://tools.ietf.org/html/bcp47#section-2.2.3) and/or [region subtag](https://tools.ietf.org/html/bcp47#section-2.2.4) if available.
+The dataset primarily focuses on numerical characters and doesn't involve natural language processing. As such, language-related considerations are not applicable.
 
 # Dataset Structure
 
 ## Data Instances
 
-Provide an JSON-formatted example and brief description of a typical instance in the dataset. If available, provide a link to further examples.
-
+**Example:**
+```json
 {
-
-'example\_field': ...,
-
-...
-
+  'image': 'link_to_image_file',
+  'label': 7
 }
-
-Provide any additional information that is not covered in the other sections about the data here. In particular describe any relationships between data points and if these relationships are made explicit.
+```
+The dataset comprises images of handwritten digits (0-9), with corresponding labels indicating the digit's identity.
 
 ## Data Fields
 
-List and describe the fields present in the dataset. Mention their data type, and whether they are used as input or output in any of the tasks the dataset currently supports. If the data has span indices, describe their attributes, such as whether they are at the character level or word level, whether they are contiguous or not, etc. If the datasets contains example IDs, state whether they have an inherent meaning, such as a mapping to other datasets or pointing to relationships between data points.
-
-- example\_field: description of example\_field
-
-Note that the descriptions can be initialized with the Show Markdown Data Fields output of the [Datasets Tagging app](https://huggingface.co/spaces/huggingface/datasets-tagging), you will then only need to refine the generated descriptions.
+- **image**: The pixel values of the handwritten digit image.
+- **label**: The digit represented by the image (0-9).
 
 ## Data Splits
 
-Describe and name the splits in the dataset if there are more than one.
-
-Describe any criteria for splitting the data, if used. If there are differences between the splits (e.g. if the training annotations are machine-generated and the dev and test ones are created by humans, or if different numbers of annotators contributed to each example), describe them here.
-
-Provide the sizes of each split. As appropriate, provide any descriptive statistics for the features, such as average length. For example:
-
-TABELLA
+The dataset typically includes training and testing splits. The training set is used for model training, while the testing set evaluates the model's performance.
 
 # Dataset Creation
 
 ## Curation Rationale
 
-What need motivated the creation of this dataset? What are some of the reasons underlying the major choices involved in putting it together?
+The MNIST dataset was created to provide a standardized benchmark for handwritten digit recognition. Its curation aimed to offer a diverse range of handwritten digit samples for robust model training and evaluation.
 
 ## Source Data
 
-This section describes the source data (e.g. news text and headlines, social media posts, translated sentences,...)
-
 **Initial Data Collection and Normalization**
 
-Describe the data collection process. Describe any criteria for data selection or filtering. List any key words or search terms used. If possible, include runtime information for the collection process.
-
-If data was collected from other pre-existing datasets, link to source here and to their [Hugging Face version](https://huggingface.co/datasets/dataset_name).
-
-If the data was modified or normalized after being collected (e.g. if the data is word-tokenized), describe the process and the tools used.
-
-**Who are the source language producers?**
-
-State whether the data was produced by humans or machine generated. Describe the people or systems who originally created the data.
-
-If available, include self-reported demographic or identity information for the source data creators, but avoid inferring this information. Instead, state that this information is unknown. See [Larson 2017](https://www.aclweb.org/anthology/W17-1601.pdf) for using identity categories as a variables, particularly gender.
-
-Describe the conditions under which the data was created (for example, if the producers were crowd workers, state what platform was used, or if the data was found, what website the data was found on). If compensation was provided, include that information here.
-
-Describe other people represented or mentioned in the data. Where possible, link to references for the information.
+The dataset was collected from a set of 250 individuals, each contributing unique handwritten digit samples. The data normalization process involved centering and resizing images to achieve consistency.
 
 ## Annotations
 
-If the dataset contains annotations which are not part of the initial data collection, describe them in the following paragraphs.
+The dataset contains annotations in the form of digit labels corresponding to each handwritten sample. Annotations were created during the initial data collection process.
 
-**Annotation process**
+**Annotation Process**
 
-If applicable, describe the annotation process and any tools used, or state otherwise. Describe the amount of data annotated, if not all. Describe or reference annotation guidelines provided to the annotators. If available, provide inter-annotator statistics. Describe any annotation validation processes.
+Annotations were generated by individuals during the collection phase, associating each image with the correct digit label.
 
 **Who are the annotators?**
 
-If annotations were collected for the source data (such as class labels or syntactic parses), state whether the annotations were produced by humans or machine generated.
-
-Describe the people or systems who originally created the annotations and their selection criteria if applicable.
-
-If available, include self-reported demographic or identity information for the annotators, but avoid inferring this information. Instead, state that this information is unknown. See [Larson 2017](https://www.aclweb.org/anthology/W17-1601.pdf) for using identity categories as a variables, particularly gender.
-
-Describe the conditions under which the data was annotated (for example, if the annotators were crowd workers, state what platform was used, or if the data was found, what website the data was found on). If compensation was provided, include that information here.
+Annotators were human contributors involved in the dataset creation, ensuring accurate labeling of handwritten digit samples.
 
 ## Personal and Sensitive Information
 
-State whether the dataset uses identity categories and, if so, how the information is used. Describe where this information comes from (i.e. self-reporting, collecting from profiles, inferring, etc.). See [Larson 2017](https://www.aclweb.org/anthology/W17-1601.pdf) for using identity categories as a variables, particularly gender. State whether the data is linked to individuals and whether those individuals can be identified in the dataset, either directly or indirectly (i.e., in combination with other data).
-
-State whether the dataset contains other data that might be considered sensitive (e.g., data that reveals racial or ethnic origins, sexual orientations, religious beliefs, political opinions or union memberships, or locations; financial or health data; biometric or genetic data; forms of government identification, such as social security numbers; criminal history).
-
-If efforts were made to anonymize the data, describe the anonymization process.
+The dataset does not involve personal or sensitive information, as it focuses solely on handwritten digits.
 
 # Considerations for Using the Data
 
 ## Social Impact of Dataset
 
-Please discuss some of the ways you believe the use of this dataset will impact society.
-
-The statement should include both positive outlooks, such as outlining how technologies developed through its use may improve people's lives and discuss the accompanying risks. These risks may range from making important decisions opaquer to people who are affected by the technology, to reinforcing existing harmful biases (whose specifics should be discussed in the next section), among other considerations.
-
-Also describe in this section if the proposed dataset contains a low-resource or under-represented language. If this is the case or if this task has any impact on underserved communities, please elaborate here.
+The use of the MNIST dataset contributes positively to the advancement of computer vision and machine learning, particularly in the domain of handwritten digit recognition. The technologies developed using this dataset can enhance various applications, such as automated postal code reading and digit-based information extraction.
 
 ## Discussion of Biases
 
-Provide descriptions of specific biases that are likely to be reflected in the data, and state whether any steps were taken to reduce their impact.
-
-For Wikipedia text, see for example [Dinan et al 2020 on biases in Wikipedia (esp. Table 1)](https://arxiv.org/abs/2005.00614), or [Blodgett et al 2020](https://www.aclweb.org/anthology/2020.acl-main.485/) for a more general discussion of the topic.
-
-If analyses have been run quantifying these biases, please add brief summaries and links to the studies here.
+As the dataset revolves around handwritten digits, biases related to language, identity, or demographics are not applicable. However, biases in digit representation, writing styles, or cultural variations may affect model performance.
 
 ## Other Known Limitations
 
-If studies of the datasets have outlined other limitations of the dataset, such as annotation artifacts, please outline and cite them here.
+While MNIST is widely used, it has limitations such as its simplicity compared to real-world scenarios. The dataset's uniform and grayscale nature may not fully capture the challenges present in diverse handwriting styles and backgrounds.
 
 # Additional Information
 
 ## Dataset Curators
 
-List the people involved in collecting the dataset and their affiliation(s). If funding information is known, include it here.
+The MNIST dataset was curated by Yann LeCun, Corinna Cortes, and Christopher J.C. Burges.
 
 ## Licensing Information
 
-Provide the license and link to the license webpage if available.
+The dataset is under the Modified BSD license.
 
 ## Citation Information
 
-Provide the [BibTex](http://www.bibtex.org/)-formatted reference for the dataset. For example:
-
-@article{article\_id,
-
-author = {Author List},
-
-title = {Dataset Paper Title},
-
-journal = {Publication Venue},
-
-year = {2525}
-
+@article{lecun2010mnist,
+  author = {LeCun, Yann and Cortes, Corinna and Burges, Christopher J.C.},
+  title = {MNIST Handwritten Digit Database},
+  journal = {ATT Labs [Online]},
+  year = {2010}
 }
 
-If the dataset has a [DOI](https://www.doi.org/), please provide it here.
-
-## Contributions
-
-Thanks to [@github-username](https://github.com/%3Cgithub-username%3E) for adding this dataset.
+Put al these in markdown using console. All inside the console.
