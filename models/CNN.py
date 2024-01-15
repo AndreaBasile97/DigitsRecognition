@@ -11,6 +11,25 @@ from keras.layers import MaxPooling2D
 from keras.layers import Dense
 from keras.layers import Flatten
 from keras.optimizers import SGD
+import mlflow
+from mlflow.keras import log_model
+import dagshub
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from the .env file
+load_dotenv()
+
+# Now you can access the environment variables using os.environ
+dags_hub_username = os.environ.get("DAGS_HUB_USERNAME")
+
+dagshub.init("DigitsRecognition", dags_hub_username, mlflow=True)
+epochs = 10
+batch_size = 32
+shuffle = True
+random_state = 1
+learning_rate = 0.01
+momentum = 0.9
 
 
 # load train and test dataset
@@ -57,6 +76,7 @@ def define_model():
     # compile model
     opt = SGD(learning_rate=0.01, momentum=0.9)
     model.compile(optimizer=opt, loss="categorical_crossentropy", metrics=["accuracy"])
+    log_model(model, "models")
     return model
 
 
@@ -64,8 +84,17 @@ def define_model():
 def evaluate_model(dataX, dataY, n_folds=5):
     scores, histories = list(), list()
     # prepare cross validation
-    kfold = KFold(n_folds, shuffle=True, random_state=1)
+    kfold = KFold(n_folds, shuffle=shuffle, random_state=random_state)
     # enumerate splits
+    mlflow.log_params(
+        {
+            "epochs": epochs,
+            "batch_size": batch_size,
+            "folds": n_folds,
+            "shuffle": shuffle,
+            "random_state": random_state,
+        }
+    )
     for train_ix, test_ix in kfold.split(dataX):
         # define model
         model = define_model()
@@ -77,11 +106,12 @@ def evaluate_model(dataX, dataY, n_folds=5):
             dataY[test_ix],
         )
         # fit model
+
         history = model.fit(
             trainX,
             trainY,
-            epochs=10,
-            batch_size=32,
+            epochs=epochs,
+            batch_size=batch_size,
             validation_data=(testX, testY),
             verbose=0,
         )
@@ -91,6 +121,7 @@ def evaluate_model(dataX, dataY, n_folds=5):
         # stores scores
         scores.append(acc)
         histories.append(history)
+    mlflow.log_metrics({"accuracy": scores[-1]})
     return scores, histories
 
 
@@ -123,6 +154,8 @@ def summarize_performance(scores):
 
 
 # run the test harness for evaluating a model
+
+
 def run_test_harness():
     # load dataset
     trainX, trainY, testX, testY = load_dataset()
@@ -136,5 +169,10 @@ def run_test_harness():
     summarize_performance(scores)
 
 
+mlflow.start_run()
+
 # entry point, run the test harness
 run_test_harness()
+
+
+mlflow.end_run()

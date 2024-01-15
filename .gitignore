@@ -87,3 +87,5 @@ target/
 
 data/interim
 data/processed
+
+mlruns
