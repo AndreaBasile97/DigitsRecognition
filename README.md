@@ -7,6 +7,8 @@ This project aims to develop an AI-enabled system focused on digit recognition f
 
 CNNs necessitate extensive labeled datasets for training, often in the order of millions of data points. Furthermore, to ensure swift and practical results, training CNNs demands high-performance processors such as Graphics Processing Units (GPUs) or Neural Processing Units (NPUs)[^1^].
 
+Dagshub: https://dagshub.com/andreabasile97/DigitsRecognition
+
 ## 🧠 Convolutional Neural Network (CNN) Architecture
 
 A CNN comprises multiple layers, each dedicated to learning distinct features within an image. Filters are systematically applied to training images at varying resolutions, with the output of each convolutional layer serving as the input for the subsequent layer. The filters typically start by identifying basic features like brightness or edges and progressively evolve to encompass more intricate features that uniquely characterize the object being recognized[^2^].
