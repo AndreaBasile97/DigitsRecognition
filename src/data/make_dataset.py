@@ -1,14 +1,8 @@
 from keras.utils import to_categorical
-import gzip
 import numpy as np
 import os
 from keras.datasets import mnist
 
-# Adjust the paths to your actual file locations
-train_images_path = "data/raw/train-images.gz"
-train_labels_path = "data/raw/train-labels.gz"
-test_images_path = "data/raw/test-images.gz"
-test_labels_path = "data/raw/test-labels.gz"
 
 interim_folder = "data/interim"
 processed_folder = "data/processed"
@@ -52,9 +46,6 @@ def prep_pixels(train, test):
     return train_norm, test_norm
 
 
-(trainX, trainY), (testX, testY) = load_mnist_data(
-    train_images_path, train_labels_path, test_images_path, test_labels_path
-)
-
+(trainX, trainY), (testX, testY) = load_mnist_data()
 trainX, testX, trainY, testY = intermediate_process(trainX, testX, trainY, testY)
 preprocessed_dataset = prep_pixels(trainX, testX)
