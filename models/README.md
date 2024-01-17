@@ -7,20 +7,17 @@
 - **Model Version:** 1.0
 - **Model Type:** CNN
 - **Training Information:**
-  - Training Algorithms: [Algorithms Used]
-  - Parameters: [Parameter Details]
-  - Fairness Constraints: [Fairness Constraints]
-  - Features: [Features Used]
+  - Training Algorithms: CNN using 5 folds Cross-validation
+  - Parameters: batch size, epochs, folds, random state, shuffle
+  - Features: : MNIST images are grayscale images of handwritten digits, each of size 28x28 pixels. The pixel values ranging from 0 to 255.
 - **Paper or Resource for More Information:** (https://ieeexplore.ieee.org/document/9451544)
-- **Citation Details:** [Citation Details]
-- **License:** [License Details]
-- **Where to Send Questions or Comments:** [Contact Information]
+- **License:** No-license
 
 ## Intended Use
 
-- **Primary Intended Uses:** Recognition of ciphers inside images or texts 
-- **Primary Intended Users:** Everyone
-- **Out-of-Scope Use Cases:** Diagnosis of dysortography
+- **Primary Intended Uses:** Recognition of digits inside images or texts taken from student' scholar tests in order to get the final grade for each student
+- **Primary Intended Users:** Professors
+- **Out-of-Scope Use Cases:** Diagnosis of dysortography; Images where the represented number is greater than 10.
 
 ## Factors
 
@@ -29,8 +26,8 @@
 
 ## Metrics
 
-- **Model Performance Measures:** [List of Performance Measures]
-- **Decision Thresholds:** [List of Decision Thresholds]
+- **Model Performance Measures:** Accuracy
+- **Decision Thresholds:** 90%
 - **Variation Approaches:** [List of Variation Approaches]
 
 ## Evaluation Data
@@ -55,7 +52,7 @@ def prep_pixels(train, test):
 
 ## Training Data
 
-- **Distribution Over Factors in Training Datasets:** [Details on Distribution]
+- **Distribution Over Factors in Training Datasets:** The dataset is composed of a training set of 60,000 examples and a test set of 10,000 examples
 
 ## Quantitative Analyses
 
@@ -64,8 +61,8 @@ def prep_pixels(train, test):
 
 ## Ethical Considerations
 
-[Discuss any ethical considerations related to the model]
+This project aims to recognize grades on students tests. Wrong predictions can led to wrong grades reporting and potentially harm the students.
 
 ## Caveats and Recommendations
 
-[Provide any caveats and recommendations related to the model]
+The model can fail when digits are not clearly written. In order to get a good predictions we recommend to write numbers in a clear
