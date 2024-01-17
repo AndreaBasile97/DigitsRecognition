@@ -6,3 +6,4 @@ mlflow
 dagshub
 python-dotenv
 pytest
+deepchecks

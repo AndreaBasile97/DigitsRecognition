@@ -16,6 +16,7 @@ from mlflow.keras import log_model
 import dagshub
 from dotenv import load_dotenv
 import os
+import numpy as np
 
 # Load environment variables from the .env file
 load_dotenv()
@@ -157,10 +158,12 @@ def summarize_performance(scores):
 
 
 def run_test_harness():
-    # load dataset
-    trainX, trainY, testX, testY = load_dataset()
-    # prepare pixel data
-    trainX, testX = prep_pixels(trainX, testX)
+    # Load normalized images
+    trainX = np.load(os.path.join("data/processed", "train_norm.npy"))
+    testX = np.load(os.path.join("data/processed", "test_norm.npy"))
+
+    trainY = np.load(os.path.join("data/interim", "trainY.npy"))
+    testY = np.load(os.path.join("data/interim", "testY.npy"))
     # evaluate model
     scores, histories = evaluate_model(trainX, trainY)
     # learning curves
