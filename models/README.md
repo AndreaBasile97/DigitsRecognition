@@ -9,10 +9,8 @@
 - **Training Information:**
   - Training Algorithms: Cross-fold validation
   - Parameters: [Parameter Details]
-  - Fairness Constraints: [Fairness Constraints]
-  - Features: [Features Used]
+  - Features: : MNIST images are grayscale images of handwritten digits, each of size 28x28 pixels. The pixel values ranging from 0 to 255.
 - **Paper or Resource for More Information:** (https://ieeexplore.ieee.org/document/9451544)
-- **Citation Details:** [Citation Details]
 - **License:** No-license
 
 ## Intended Use
@@ -29,7 +27,7 @@
 ## Metrics
 
 - **Model Performance Measures:** Accuracy
-- **Decision Thresholds:** [List of Decision Thresholds]
+- **Decision Thresholds:** 90%
 - **Variation Approaches:** [List of Variation Approaches]
 
 ## Evaluation Data
@@ -63,8 +61,8 @@ def prep_pixels(train, test):
 
 ## Ethical Considerations
 
-[Discuss any ethical considerations related to the model]
+This project aims to recognize grades on students tests. Wrong predictions can led to wrong grades reporting and potentially harm the students.
 
 ## Caveats and Recommendations
 
-[Provide any caveats and recommendations related to the model]
+The model can fail when digits are not clearly written. In order to get a good predictions we recommend to write numbers in a clear
