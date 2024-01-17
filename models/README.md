@@ -7,20 +7,19 @@
 - **Model Version:** 1.0
 - **Model Type:** CNN
 - **Training Information:**
-  - Training Algorithms: [Algorithms Used]
+  - Training Algorithms: Cross-fold validation
   - Parameters: [Parameter Details]
   - Fairness Constraints: [Fairness Constraints]
   - Features: [Features Used]
 - **Paper or Resource for More Information:** (https://ieeexplore.ieee.org/document/9451544)
 - **Citation Details:** [Citation Details]
-- **License:** [License Details]
-- **Where to Send Questions or Comments:** [Contact Information]
+- **License:** No-license
 
 ## Intended Use
 
-- **Primary Intended Uses:** Recognition of ciphers inside images or texts 
-- **Primary Intended Users:** Everyone
-- **Out-of-Scope Use Cases:** Diagnosis of dysortography
+- **Primary Intended Uses:** Recognition of digits inside images or texts taken from student' scholar tests in order to get the final grade for each student
+- **Primary Intended Users:** Professors
+- **Out-of-Scope Use Cases:** Diagnosis of dysortography; Images where the represented number is greater than 10.
 
 ## Factors
 
@@ -29,7 +28,7 @@
 
 ## Metrics
 
-- **Model Performance Measures:** [List of Performance Measures]
+- **Model Performance Measures:** Accuracy
 - **Decision Thresholds:** [List of Decision Thresholds]
 - **Variation Approaches:** [List of Variation Approaches]
 
