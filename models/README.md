@@ -52,7 +52,7 @@ def prep_pixels(train, test):
 
 ## Training Data
 
-- **Distribution Over Factors in Training Datasets:** [Details on Distribution]
+- **Distribution Over Factors in Training Datasets:** The dataset is composed of a training set of 60,000 examples and a test set of 10,000 examples
 
 ## Quantitative Analyses
 
