@@ -21,8 +21,8 @@
 
 ## Factors
 
-- **Relevant Factors:** different handwriting styles, image brightness, image light or dark background, image rotation, image sharpness
-- **Evaluation Factors:** network depth, network width and cardinality
+- **Relevant Factors:** Different handwriting styles, image brightness, image light or dark background, image rotation, image sharpness
+- **Evaluation Factors:** Network depth, network width and cardinality
 
 ## Metrics
 
