@@ -66,3 +66,7 @@ This project aims to recognize grades on students tests. Wrong predictions can l
 ## Caveats and Recommendations
 
 The model can fail when digits are not clearly written. In order to get a good predictions we recommend to write numbers in a clear
+
+## Model requirements checklist
+
+- **Minimum accuracy expectations:**
