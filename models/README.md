@@ -8,7 +8,7 @@
 - **Model Type:** CNN
 - **Training Information:**
   - Training Algorithms: CNN using 5 folds Cross-validation
-  - Parameters: [Parameter Details]
+  - Parameters: batch size, epochs, folds, random state, shuffle
   - Features: : MNIST images are grayscale images of handwritten digits, each of size 28x28 pixels. The pixel values ranging from 0 to 255.
 - **Paper or Resource for More Information:** (https://ieeexplore.ieee.org/document/9451544)
 - **License:** No-license
