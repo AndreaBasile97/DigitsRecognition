@@ -9,3 +9,5 @@ deepchecks[vision]
 scikit-image
 torch
 torchvision
+fastapi
+uvicorn

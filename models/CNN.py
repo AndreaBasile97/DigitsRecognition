@@ -166,10 +166,38 @@ def run_test_harness():
     testY = np.load(os.path.join("data/interim", "testY.npy"))
     # evaluate model
     scores, histories = evaluate_model(trainX, trainY)
-    # learning curves
+    # Save the trained model
+    model = define_model()  # Define the model again to ensure consistency
+    model_filename = "mnist_cnn_model.h5"
+    model.save(model_filename)
+    print("Model saved successfully as", model_filename)
+
+    # Save learning curves
     summarize_diagnostics(histories)
-    # summarize estimated performance
+
+    # Save metrics
+    save_metrics(scores)
+
+    # Summarize estimated performance
     summarize_performance(scores)
+
+
+# Save the model to a file after training
+def save_model(model, filename="model.h5"):
+    model.save(filename)
+    print("Model saved successfully as", filename)
+
+
+# Save metrics to a CSV file
+def save_metrics(scores, filename="metrics.csv"):
+    import csv
+
+    with open(filename, mode="w", newline="") as file:
+        writer = csv.writer(file)
+        writer.writerow(["Fold", "Accuracy"])
+        for i, score in enumerate(scores, start=1):
+            writer.writerow([i, score])
+    print("Metrics saved successfully as", filename)
 
 
 mlflow.start_run()
