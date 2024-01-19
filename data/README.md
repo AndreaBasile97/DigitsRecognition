@@ -4,10 +4,12 @@ The MNIST database is a comprehensive collection of handwritten digits utilized 
 
 This dataset composed by handwritten digits has a training set of 60,000 examples, and a test set of 10,000 examples.
 Four files are available:
-train-images-idx3-ubyte.gz: training set images (9912422 bytes)
-train-labels-idx1-ubyte.gz: training set labels (28881 bytes)
-t10k-images-idx3-ubyte.gz: test set images (1648877 bytes)
-t10k-labels-idx1-ubyte.gz: test set labels (4542 bytes)## Supported Tasks and Leaderboards
+- train-images-idx3-ubyte.gz: training set images (9912422 bytes)
+- train-labels-idx1-ubyte.gz: training set labels (28881 bytes)
+- t10k-images-idx3-ubyte.gz: test set images (1648877 bytes)
+- t10k-labels-idx1-ubyte.gz: test set labels (4542 bytes)
+
+## Supported Tasks and Leaderboards
 
 - **Digit Recognition Task**: The dataset is commonly used for training models to recognize handwritten digits. Success is measured by achieving high accuracy, with models like the [LeNet](https://yann.lecun.com/exdb/lenet/) architecture setting a benchmark.
 
@@ -95,7 +97,7 @@ The dataset is under the Modified BSD license.
   author = {LeCun, Yann and Cortes, Corinna and Burges, Christopher J.C.},
   title = {MNIST Handwritten Digit Database},
   journal = {ATT Labs [Online]},
-  year = {2010}
+  year = {2010},
 }
 
 Put al these in markdown using console. All inside the console.
