@@ -1,6 +1,5 @@
 tensorflow
 matplotlib
-tensorflow.keras
 scikit-learn
 mlflow
 dagshub
