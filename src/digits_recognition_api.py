@@ -6,6 +6,7 @@ import numpy as np
 from keras.models import load_model
 from keras.preprocessing import image
 from io import BytesIO
+import pandas as pd
 
 app = FastAPI()
 
@@ -41,3 +42,20 @@ async def predict_image(item: UploadFile):
         )
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/models")
+async def get_last_accuracy():
+    # Read the CSV file into a Pandas DataFrame
+    metrics_df = pd.read_csv("metrics.csv")
+    try:
+        # Get the last row (which corresponds to the last fold) from the DataFrame
+        last_row = metrics_df.iloc[-1]
+
+        # Extract the accuracy value from the last row
+        last_accuracy = last_row["Accuracy"]
+
+        return {"last_accuracy": last_accuracy}
+
+    except Exception as e:
+        return {"error": str(e)}
