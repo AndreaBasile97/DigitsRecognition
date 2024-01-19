@@ -5,4 +5,7 @@ mlflow
 dagshub
 python-dotenv
 pytest
-deepchecks
+deepchecks[vision]
+scikit-image
+torch
+torchvision

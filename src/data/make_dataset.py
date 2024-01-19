@@ -52,9 +52,6 @@ def prep_pixels(train, test):
     return train_norm, test_norm
 
 
-(trainX, trainY), (testX, testY) = load_mnist_data(
-    train_images_path, train_labels_path, test_images_path, test_labels_path
-)
-
+(trainX, trainY), (testX, testY) = load_mnist_data()
 trainX, testX, trainY, testY = intermediate_process(trainX, testX, trainY, testY)
 preprocessed_dataset = prep_pixels(trainX, testX)
