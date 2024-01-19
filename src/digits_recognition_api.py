@@ -16,6 +16,7 @@ loaded_model = load_model("mnist_cnn_model.h5")
 
 @app.post("/model")
 async def predict_image(item: UploadFile):
+    "The model is trained to recognize handwritten digits in images and the image size must be 28x28. The dataset used to train this model, the MNIST dataset, is comprised by images of handwritten digits from 0 to 9, therefore this model will only recognize separated units."
     try:
         # Read the image file directly from the UploadFile
         contents = item.file.read()
@@ -46,6 +47,7 @@ async def predict_image(item: UploadFile):
 
 @app.get("/models")
 async def get_last_accuracy():
+    "The output of this step is the main metric to evaluate the efficacy of the model, which is the accuracy, reported as a percentage value."
     # Read the CSV file into a Pandas DataFrame
     metrics_df = pd.read_csv("metrics.csv")
     try:
