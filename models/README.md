@@ -75,10 +75,3 @@ The model can fail when digits are not clearly written. In order to get a good p
 - **Security and privacy concerns in the system:** The model outputs have to be accessible only by the model users and the addressed students. The other students can't access these data.
 - **Data availability:** Link to dataset card: (https://github.com/AndreaBasile97/DigitsRecognition/tree/main/data)
 
-## FastAPI
-
-@app.post("/model")
-"The model is trained to recognize handwritten digits in images and the image size must be 28x28 pixels. The dataset used to train this model, the MNIST dataset, is comprised by images of handwritten digits from 0 to 9, therefore this model will only recognize separated units."
-
-@app.get("/models")
-"The output of this step is the main metric to evaluate the efficacy of the model, which is the accuracy, reported as a percentage value."
