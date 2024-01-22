@@ -171,7 +171,9 @@ def run_test_harness():
     model_filename = "mnist_cnn_model.h5"
     model.save(model_filename)
     print("Model saved successfully as", model_filename)
-
+    model.save_weights("mnist_cnn_model_weights.h5")
+    print("Model saved successfully as", model_filename)
+    print("Model weights saved successfully as mnist_cnn_model_weights.h5")
     # Save learning curves
     summarize_diagnostics(histories)
 
@@ -180,12 +182,6 @@ def run_test_harness():
 
     # Summarize estimated performance
     summarize_performance(scores)
-
-
-# Save the model to a file after training
-def save_model(model, filename="model.h5"):
-    model.save(filename)
-    print("Model saved successfully as", filename)
 
 
 # Save metrics to a CSV file

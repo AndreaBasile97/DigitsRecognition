@@ -12,6 +12,9 @@ app = FastAPI()
 
 # Load the saved model
 loaded_model = load_model("mnist_cnn_model.h5")
+# Load the saved weights into the model
+weights_path = "mnist_cnn_model_weights.h5"
+loaded_model.load_weights(weights_path)
 
 
 @app.post("/model")
