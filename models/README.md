@@ -56,9 +56,8 @@ def prep_pixels(train, test):
 
 ## Quantitative Analyses
 
-- **Unitary Results:**
+- **Unitary Results:** 
 ![image](https://github.com/AndreaBasile97/DigitsRecognition/assets/156330529/48b885c8-ca58-4af1-a353-bce3a4393a1b)
-- **Intersectional Results:** [Results of Intersectional Analyses]
 
 ## Ethical Considerations
 
