@@ -172,7 +172,6 @@ def run_test_harness():
     model.save(model_filename)
     print("Model saved successfully as", model_filename)
     model.save_weights("mnist_cnn_model_weights.h5")
-    print("Model saved successfully as", model_filename)
     print("Model weights saved successfully as mnist_cnn_model_weights.h5")
     # Save learning curves
     summarize_diagnostics(histories)

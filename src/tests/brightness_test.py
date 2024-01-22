@@ -3,6 +3,7 @@ from keras.datasets import mnist
 from keras.preprocessing import image
 from keras.models import load_model
 import numpy as np
+import pytest
 
 # Load the pre-trained model architecture
 model = load_model("mnist_cnn_model.h5")
@@ -41,12 +42,12 @@ def predict_and_print(img_array, brightness=False):
     print("Predicted digit:", np.argmax(predictions))
 
 
-# Process each specified image
-for i, img_index in enumerate(indices):
-    print(f"\nProcessing image {i + 1}/{len(indices)} (Index: {img_index})")
+# Pytest test function
+@pytest.mark.parametrize("img_index", [0, 1, 2])
+def test_brightness_adjustment(img_index):
+    img_array = preprocess_image(images[img_index])
 
     # Predict without brightness adjustment
-    img_array = preprocess_image(x_test[img_index])
     predict_and_print(img_array)
 
     # Predict with brightness adjustment
