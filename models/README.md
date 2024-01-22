@@ -74,3 +74,4 @@ The model can fail when digits are not clearly written. In order to get a good p
 - **Safety and fairness concerns in the system:** Concerning safety requirements, if there are handwritten digits that can look alike, the model needs to distinguish them to provide a precise output.
 - **Security and privacy concerns in the system:** The model outputs have to be accessible only by the model users and the addressed students. The other students can't access these data.
 - **Data availability:** Link to dataset card: (https://github.com/AndreaBasile97/DigitsRecognition/tree/main/data)
+
