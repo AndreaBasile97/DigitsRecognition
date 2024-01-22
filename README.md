@@ -83,7 +83,6 @@ The model aims to recognize handwritten digits from 0 to 9 in images and the ima
 
 **FastAPI link:** (https://github.com/AndreaBasile97/DigitsRecognition/blob/fastapi/src/digits_recognition_api.py)
 
-
-
+--------------------
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
