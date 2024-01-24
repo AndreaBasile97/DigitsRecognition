@@ -76,7 +76,8 @@ async def predict_image(item: UploadFile):
 
 @app.get("/model_metrics")
 async def get_last_accuracy():
-    "The output of this step is the main metric to evaluate the efficacy of the model, which is the accuracy, reported as a percentage value."
+    "The output of this step is the main metric to evaluate the efficacy of the model, 
+    which is the accuracy, reported as a percentage value."
     # Read the CSV file into a Pandas DataFrame
     metrics_df = pd.read_csv("metrics.csv")
     try:
