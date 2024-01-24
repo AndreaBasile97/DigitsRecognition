@@ -54,7 +54,9 @@ def make_prediction(input_data: bytes | Image.Image):
 
 @app.post("/predict")
 async def predict_image(item: UploadFile):
-    "The model is trained to recognize handwritten digits in images, which must not be in .PNG, and the image size must be 28x28 pixels. The dataset used to train this model, the MNIST dataset, is comprised by images of handwritten digits from 0 to 9, therefore this model will only recognize separated units."
+    "The model is trained to recognize handwritten digits in images, which must not be in .PNG, 
+    and the image size must be 28x28 pixels. The dataset used to train this model, the MNIST dataset,
+    is comprised by images of handwritten digits from 0 to 9, therefore this model will only recognize separated units."
     try:
         # Check if the file has an allowed extension
         if not allowed_file(item.filename):
