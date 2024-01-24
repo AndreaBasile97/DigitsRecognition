@@ -11,3 +11,5 @@ torch
 torchvision
 fastapi
 uvicorn
+gradio
+python-multipart
