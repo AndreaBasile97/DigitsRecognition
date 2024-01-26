@@ -28,7 +28,6 @@
 
 - **Model Performance Measures:** Accuracy
 - **Decision Thresholds:** 90%
-- **Variation Approaches:** [List of Variation Approaches]
 
 ## Evaluation Data
 
